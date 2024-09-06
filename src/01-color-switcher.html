@@ -1,10 +1,58 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Color switcher</title>
     <link rel="stylesheet" href="css/common.css" />
+    <style>
+      body {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        width: 1400px;
+        height: 100vh;
+        font-size: 24px;
+        font-family: Arial, sans-serif;
+      }
+
+      body a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-right: auto;
+      }
+
+      button {
+        margin: 0;
+        width: 100px;
+        height: 100px;
+        border: none;
+        border-radius: 50%;
+        background-color: rgba(127, 255, 212, 0.328);
+        box-shadow: 1px 2px 4px 3px rgb(123, 116, 122);
+        color: rgb(255, 255, 255);
+        text-shadow:
+          2px 0 2px #180506,
+          0 2px 2px #050101,
+          -2px 0 2px #170506,
+          0 -2px 2px #060101;
+        font-size: 24px;
+        text-align: center;
+      }
+      button[disabled] {
+        box-shadow:
+          rgb(0, 0, 0, 0.2) 3px 3px 6px 0px inset,
+          rgba(0, 0, 0, 0.2) -3px -3px 6px 1px inset;
+      }
+      button:active {
+        background-color: rgba(127, 255, 212, 0.5);
+        box-shadow: inset 1px 2px 4px 3px rgb(123, 116, 122);
+      }
+    </style>
   </head>
   <body>
     <p><a href="index.html">Go back</a></p>
